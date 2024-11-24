@@ -31,6 +31,13 @@ C<cargo cpi>.
 
 =cut
 
+sub bin_dir {
+    my $self = shift;
+    my @dirs = Alien::cargo->bin_dir;
+    unshift @dirs, $self->SUPER::bin_dir;
+    @dirs;
+}
+
 1;
 
 =head1 SEE ALSO
