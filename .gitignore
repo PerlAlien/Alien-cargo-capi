@@ -1,0 +1,5 @@
+Alien-cargo-capi-*
+/.build/
+*.swp
+
+
