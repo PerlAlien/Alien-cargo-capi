@@ -33,6 +33,7 @@ C<cargo cpi>.
 
 sub bin_dir {
     my $self = shift;
+    require Alien::cargo;
     my @dirs = Alien::cargo->bin_dir;
     unshift @dirs, $self->SUPER::bin_dir;
     @dirs;
